@@ -1,8 +1,221 @@
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+    /* background: rgba(255, 221, 214, 0.671); */
 }
-img {
+
+html {
+    font-size: 62.5%;
+}
+
+:root {
+    --brown: #663300;
+    --light-brown: #bf8e5c;
+    --beige: #fff2e6;
+}
+
+#home {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100vw;
+    background-color: gray;
+}
+
+#cafe {
+    stroke-width: 0.5rem;
+}
+
+#cafe-name {
+    stroke: var(--beige);
+}
+
+#image1_0_1, #cafe-name, #image2_0_1, #image3_0_1 {
+    animation: nameLight 3s ease-in-out infinite;
+}
+
+@keyframes nameLight {
+    0% {
+        filter: drop-shadow(0px 0px 3px white);
+    }
+    25% {
+        filter: drop-shadow(0px 0px 2px brown);
+    }
+    50% {
+        filter: drop-shadow(0px 0px 3px white);
+    }
+    75% {
+        filter: drop-shadow(0px 0px 2px brown);
+    }
+    100% {
+        filter: drop-shadow(0px 0px 3px white);
+    }
+}
+
+#image3_0_1 {
+    animation: contactLight 3s ease-in-out infinite;
+}
+
+@keyframes contactLight {
+    0% {
+        filter: drop-shadow(0px 0px 4px white);
+    }
+    25% {
+        filter: drop-shadow(0px 0px 4px brown);
+    }
+    50% {
+        filter: drop-shadow(0px 0px 4px white);
+    }
+    75% {
+        filter: drop-shadow(0px 0px 4px brown);
+    }
+    100% {
+        filter: drop-shadow(0px 0px 4px white);
+    }
+}
+
+#cafe-menu:hover, #cafe-contact:hover {
+    animation: hoverLight 3s ease-in-out infinite;
+}
+
+@keyframes hoverLight {
+    0% {
+        filter: drop-shadow(0px 0px 3px brown) brightness(5) saturate(0.17) grayscale(0.3);
+    }
+    25% {
+        filter: drop-shadow(0px 0px 2px var(--beige));
+    }
+    50% {
+        filter: drop-shadow(0px 0px 3px brown) brightness(5) saturate(0.17) grayscale(0.3);
+    }
+    75% {
+        filter: drop-shadow(0px 0px 2px var(--beige));
+    }
+    100% {
+        filter: drop-shadow(0px 0px 3px brown) brightness(5) saturate(0.17) grayscale(0.3);
+    }
+}
+
+#image4_0_1 {
+    animation: aboutLight 3s ease-in-out infinite;
+}
+
+@keyframes aboutLight {
+    0% {
+        filter: drop-shadow(0px 0px 3px white);
+    }
+    25% {
+        filter: drop-shadow(0px 0px 2px black);
+    }
+    50% {
+        filter: drop-shadow(0px 0px 3px white);
+    }
+    75% {
+        filter: drop-shadow(0px 0px 2px black);
+    }
+    100% {
+        filter: drop-shadow(0px 0px 3px white);
+    }
+}
+
+#cafe-about {
+    filter: brightness(5) saturate(0.17) grayscale(0.3);
+ }
+ 
+ #cafe-about:hover {
+     animation: aboutHoverLight 3s ease-in-out infinite;
+ }
+
+ @keyframes aboutHoverLight {
+    0% {
+        filter: drop-shadow(0px 0px 3px white) brightness(5) saturate(0.17) grayscale(0.3);
+    }
+    25% {
+        filter: drop-shadow(0px 0px 2px var(--beige));
+    }
+    50% {
+        filter: drop-shadow(0px 0px 3px white) brightness(5) saturate(0.17) grayscale(0.3);
+    }
+    75% {
+        filter: drop-shadow(0px 0px 2px var(--beige));
+    }
+    100% {
+        filter: drop-shadow(0px 0px 3px white) brightness(5) saturate(0.17) grayscale(0.3);
+    }
+}
+
+#cafe-menu, #cafe-contact, #cafe-about {
+    cursor: pointer;
+}
+
+#Contact {
     width: 100%;
-    
+    background: var(--beige);
+}
+
+.footer-titles {
+    color: var(--brown);
+}
+
+.list-items a {
+    text-decoration: none;
+    color: var(--light-brown);
+}
+
+.list-items a:hover {
+    color: var(--brown);
+}
+ 
+/* Media queries */
+@media screen and (max-width: 400px) {
+    #home {
+        height: 100vh;
+        overflow: hidden;
+    }
+    #cafe-container {
+        width: 140%;
+        object-position: center;
+    }
+
+    footer {
+        font-size: 1.8rem;
+    }
+}
+@media screen and (min-width: 400px) {
+    #home {
+        height: 100vh;
+        overflow: hidden;
+    }
+    #cafe-container {
+        width: 130%;
+        object-position: center;
+    }
+
+    footer {
+        font-size: 2rem;
+    }
+}
+
+@media screen and (min-width: 700px) {
+}
+
+@media screen and (min-width: 768px) {
+    footer {
+        font-size: 3rem;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    footer {
+        font-size: 3rem;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+}
+
+@media screen and (min-width: 1500px) {
 }
