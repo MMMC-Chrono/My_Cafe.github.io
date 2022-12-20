@@ -15,6 +15,10 @@ html {
     --beige: #fff2e6;
 }
 
+body {
+    font-size: 1.7rem;
+}
+
 .nav-container {
     display: flex;
     flex-direction: row;
@@ -25,12 +29,12 @@ html {
     background-color: var(--beige);
 }
 
-.nav-container a {
+.nav-container a, .icons {
     transition: transform 0.5s linear;
 }
 
-.nav-container a:hover {
-    transform: scale(1.2);
+.nav-container a:hover, .icons:hover {
+    transform: scale(1.1);
 }
 
 .right-side {
@@ -40,24 +44,23 @@ html {
     justify-content: space-around;
 }
 
-.nav-name img{
-    max-height: 3rem;
-    padding-left: 1.5rem;
-}
-
-.right-side img {
-    max-height: 2rem;
-}
-
-
-#Contact {
+footer {
     width: 100%;
     position: relative;
+    display: grid;
     background: var(--beige);
+}
+
+.categories {
+    display: grid;
 }
 
 .footer-titles {
     color: var(--brown);
+}
+
+.list-items {
+    list-style: none;
 }
 
 .list-items a {
@@ -67,4 +70,91 @@ html {
 
 .list-items a:hover {
     color: var(--brown);
+}
+
+/* Media queries */
+@media screen and (max-width: 400px) {
+    
+    body {
+        font-size: 1.5rem;
+    }
+    .nav-name img{
+        height: 2.8rem;
+        padding-left: 1.3rem;
+    }
+    
+    .right-side img {
+        height: 2rem;
+    }
+    
+    .icons {
+        width: 2.8rem;
+    }
+    .footer-titles {
+        font-size: 1.6rem;
+    }
+}
+@media screen and (min-width: 400px) {
+
+    .nav-name img{
+        height: 3rem;
+        padding-left: 1.5rem;
+    }
+    
+    .right-side img {
+        height: 2rem;
+    }
+
+    footer {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .categories {
+        grid-template-columns: repeat(2, 1fr);
+        margin: 0 1rem;
+    }
+
+    .sub {
+        margin: 0 1rem;
+    }
+
+    .icons {
+        width: 3rem;
+    }
+    .footer-titles {
+        font-size: 1.9rem;
+    }
+}
+
+@media screen and (min-width: 700px) {
+}
+
+@media screen and (min-width: 768px) {
+    .nav-name img{
+        height: 3.3rem;
+        padding-left: 1.7rem;
+    }
+    
+    .right-side img {
+        height: 2.3rem;
+    }
+
+    footer {
+        font-size: 2.3rem;
+    }
+    .icons {
+        width: 3.3rem;
+    }
+    .footer-titles {
+        font-size: 2.5rem;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+}
+
+@media screen and (min-width: 1200px) {
+}
+
+@media screen and (min-width: 1500px) {
 }
