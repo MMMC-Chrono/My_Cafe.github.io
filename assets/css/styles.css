@@ -92,7 +92,7 @@ html {
 }
 
 #first-batch {
-    animation: animate1 7s ease-in-out infinite;
+    animation: animate1 5s ease-in-out infinite;
     filter: brightness(2) blur(0.5);
 }
 
@@ -115,7 +115,7 @@ html {
 }
 
 #second-batch {
-    animation: animate2 7s ease-in-out infinite;
+    animation: animate2 5s ease-in-out infinite;
     filter: brightness(2) blur(0.5);
 }
 
@@ -138,7 +138,7 @@ html {
 }
 
 #third-batch {
-    animation: animate3 8s ease-in-out infinite;
+    animation: animate3 5s ease-in-out infinite;
     filter: brightness(2) blur(0.5);
 }
 
@@ -160,8 +160,8 @@ html {
     }
 }
 
-#image0_0_1 {
-    filter: drop-shadow(0px 0px 3px gray);
+#image0_4_2 {
+    filter: drop-shadow(-2px 5px 10px gray);
 }
 
 #cafe-name {

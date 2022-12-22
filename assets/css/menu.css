@@ -13,20 +13,29 @@ html {
     --brown: #663300;
     --light-brown: #bf8e5c;
     --beige: #fff2e6;
+    --title-font-lg: 2.5rem;
+    --title-font-md: 1.9rem;
+    --title-font-sm: 1.6rem;
+    --title-font-xs: 1.3rem;
 }
 
 body {
-    font-size: 1.7rem;
+    font-family: Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.padding-block {
+    padding-block: 1rem;
 }
 
 .nav-container {
+    position: fixed;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    max-width: 100%;
-    padding-block: 1rem;
+    width: 100%;
     background-color: var(--beige);
+    z-index: 10;
 }
 
 .nav-container a, .icons {
@@ -44,10 +53,46 @@ body {
     justify-content: space-around;
 }
 
+.menu {
+    position: relative;
+    width: 100%;
+    top: 5rem;
+    text-align: center;
+    color: var(--brown);
+}
+
+.menu h5 {
+    color: var(--light-brown);
+}
+
+.menu li, .menu h5 {
+    padding-block: 0.5rem;
+}
+
+.menu section::after {
+    content: '- - - - -';
+    font-weight: bolder;
+}
+
+.ingredients {
+    display: block;
+    color: rgba(145, 105, 60, 0.81);
+}
+
+.ingredients::before {
+    content: '(';
+}
+
+.ingredients::after {
+    content: ')';
+}
+
 footer {
     width: 100%;
     position: relative;
+    top: 5rem;
     display: grid;
+    padding: 1rem 2rem;
     background: var(--beige);
 }
 
@@ -55,7 +100,7 @@ footer {
     display: grid;
 }
 
-.footer-titles {
+.footer-titles, .company-policies {
     color: var(--brown);
 }
 
@@ -78,6 +123,7 @@ footer {
     body {
         font-size: 1.5rem;
     }
+
     .nav-name img{
         height: 2.8rem;
         padding-left: 1.3rem;
@@ -91,10 +137,14 @@ footer {
         width: 2.8rem;
     }
     .footer-titles {
-        font-size: 1.6rem;
+        font-size: var(--title-font-sm);
     }
 }
 @media screen and (min-width: 400px) {
+
+    body {
+        font-size: 1.7rem;
+    }
 
     .nav-name img{
         height: 3rem;
@@ -121,8 +171,12 @@ footer {
     .icons {
         width: 3rem;
     }
-    .footer-titles {
-        font-size: 1.9rem;
+    .footer-titles, .menu h5 {
+        font-size: var(--title-font-md);
+    }
+
+    .ingredients {
+        font-size: var(--title-font-sm);
     }
 }
 
@@ -130,6 +184,11 @@ footer {
 }
 
 @media screen and (min-width: 768px) {
+
+    body {
+        font-size: 2.3rem;
+    }
+
     .nav-name img{
         height: 3.3rem;
         padding-left: 1.7rem;
@@ -145,8 +204,8 @@ footer {
     .icons {
         width: 3.3rem;
     }
-    .footer-titles {
-        font-size: 2.5rem;
+    .footer-titles, .menu h5 {
+        font-size: var(--title-font-lg);
     }
 }
 
