@@ -24,6 +24,15 @@ html {
     width: 100vw;
 }
 
+.circles {
+    position: absolute;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    background-color: red;
+    z-index: 100;
+}
+
 #cafe-cover {
     width: 120%;
     height: 100%;
@@ -79,11 +88,6 @@ html {
     100% {
         opacity: 1;
     }
-}
-
-#cafe {
-    stroke: #ffffff;
-    stroke-width: 0.5rem;
 }
 
 #vapor {
