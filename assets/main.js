@@ -7,7 +7,6 @@ const selectEl = selector => {
 //nav-bar-shadow
 const scrollHeader = () => {
     const headerEl = selectEl('#header');
-    console.log(this.scrollY)
     if (this.scrollY >= 15) {
         headerEl.classList.add('nav-shadow');
     } else {
