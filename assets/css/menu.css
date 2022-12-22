@@ -12,6 +12,7 @@ html {
 :root {
     --brown: #663300;
     --light-brown: #bf8e5c;
+    --transparent-brown: #905e2dc0;
     --beige: #fff2e6;
     --title-font-lg: 2.5rem;
     --title-font-md: 1.9rem;
@@ -53,6 +54,11 @@ body {
     justify-content: space-around;
 }
 
+.nav-shadow {
+    box-shadow: 0px 1px 3px var(--transparent-brown);
+    transition: box-shadow 0.5s;
+}
+
 .menu {
     position: relative;
     width: 100%;
@@ -74,9 +80,17 @@ body {
     font-weight: bolder;
 }
 
+.menu-img {
+    display: block;
+    margin: auto;
+    border-radius: 50%;
+    width: 15rem;
+    height: 15rem;
+}
+
 .ingredients {
     display: block;
-    color: rgba(145, 105, 60, 0.81);
+    color: var(--transparent-brown);
 }
 
 .ingredients::before {
