@@ -22,6 +22,8 @@ html {
 
 body {
     font-family: Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 2rem;
+    color: var(--brown);
 }
 
 .padding-block {
@@ -59,79 +61,74 @@ body {
     transition: box-shadow 0.5s;
 }
 
-.menu {
+section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
     position: relative;
-    width: 100%;
-    top: 5rem;
+    top: 6rem;
+}
+
+.section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
     text-align: center;
-    color: var(--brown);
-}
-
-.menu h5 {
-    color: var(--light-brown);
     margin-top: 1rem;
-    padding-block: 1rem;
+    margin-bottom: 3.5rem;
 }
 
-.menu li{
-    padding-block: 2rem;
+h2 {
+    color: var(--light-brown);
 }
 
-.menu section::after {
-    content: '- - - - -';
-    font-weight: bolder;
+.about-images {
+    position: relative;
+    width: 30rem;
+    margin: 2rem;
+    box-shadow: 0px 3px 9px rgb(49, 49, 49);
 }
 
-.menu li:last-child {
+.text {
+    max-width: 50rem;
+    padding: 1rem 3rem;
+    word-spacing: 0.3rem;
+    line-height: 3rem;
+}
+
+.about-name {
+    position: relative;
+    top: 0.7rem;
+    margin: 0 0.5rem;
+    width: 7rem;
+    box-shadow: none;
+}
+
+.imgs {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    width: 100%;
     margin-bottom: 1rem;
 }
-.menu-img {
-    display: block;
-    margin: auto;
-    border-radius: 50%;
-    width: 15rem;
+
+.imgs img {
     height: 15rem;
-    object-fit: cover;
-    object-position: center;
+    margin: 1rem;
+    box-shadow: 0px 3px 5px rgb(49, 49, 49);
 }
 
-.ingredients {
-    display: block;
+.thanks {
     color: var(--transparent-brown);
-}
-
-.ingredients::before {
-    content: '(';
-}
-
-.ingredients::after {
-    content: ')';
-}
-
-#toTop {
-    position: fixed;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    right: 1rem;
-    bottom: 1rem;
-    width: 4rem;
-    height: 4rem;
-    border-radius: 50%;
-    background: var(--brown);
-    opacity: 0.9;
-    text-decoration: none;
-    z-index: 10;
-}
-
-#toTop:hover {
-    opacity: 1;
 }
 
 footer {
     width: 100%;
     position: relative;
-    top: 5rem;
+    top: 6rem;
     display: grid;
     padding: 1rem 2rem;
     background: var(--beige);
@@ -162,7 +159,7 @@ footer {
 @media screen and (max-width: 400px) {
     
     body {
-        font-size: 1.5rem;
+        font-size: 2rem;
     }
 
     .nav-name img{
@@ -177,15 +174,19 @@ footer {
     .icons {
         width: 2.8rem;
     }
-    .footer-titles, .menu h5 {
+    .footer-titles {
         font-size: var(--title-font-sm);
+    }    
+
+    .farm {
+        height: 50vh;
+    }
+
+    .imgs img {
+        height: 12rem;
     }
 }
 @media screen and (min-width: 400px) {
-
-    body {
-        font-size: 1.7rem;
-    }
 
     .nav-name img{
         height: 3rem;
@@ -212,12 +213,8 @@ footer {
     .icons {
         width: 3rem;
     }
-    .footer-titles, .menu h5 {
+    .footer-titles {
         font-size: var(--title-font-md);
-    }
-
-    .ingredients {
-        font-size: var(--title-font-sm);
     }
 }
 
@@ -241,6 +238,7 @@ footer {
 
     footer {
         font-size: 2.3rem;
+        top: 6.5rem;
     }
     .icons {
         width: 3.3rem;
@@ -248,17 +246,23 @@ footer {
     .footer-titles, .menu h5 {
         font-size: var(--title-font-lg);
     }
+
+    section {
+        top: 7rem;
+    }
+
+    .about-images {
+        width: 40rem;
+    }
+
+    .imgs img {
+        height: 20rem;
+    }
 }
 
 @media screen and (min-width: 1024px) {
-    .menu ul{
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        list-style: none;
-    }
-
-    .menu section::after {
-        content: '- - - - - - - - -';
+    body {
+        font-size: 2.5rem;
     }
 }
 

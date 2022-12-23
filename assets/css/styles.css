@@ -165,7 +165,25 @@ html {
 }
 
 #image0_4_2 {
-    filter: drop-shadow(-2px 3px 7px gray);
+    animation: shadow 5s infinite;
+}
+
+@keyframes shadow {
+    0% {
+        filter: drop-shadow(-2px 5px 10px gray);
+    }
+    25% {
+        filter: drop-shadow(-2px 3px 7px whitesmoke);
+    }
+    50% {
+        filter: drop-shadow(-2px 5px 10px gray);
+    }
+    75% {
+        filter: drop-shadow(-2px 3px 7px whitesmoke);
+    }
+    100% {
+        filter: drop-shadow(-2px 5px 10px gray);
+    }
 }
 
 #cafe-name {
