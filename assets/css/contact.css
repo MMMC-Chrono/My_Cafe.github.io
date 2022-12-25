@@ -22,6 +22,8 @@ html {
 
 body {
     font-family: Calibri, 'Trebuchet MS', sans-serif;
+    color: var(--brown);
+    font-size: 2rem;
 }
 
 .padding-block {
@@ -59,6 +61,68 @@ body {
     transition: box-shadow 0.5s;
 }
 
+.main {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    top: 5.4rem;
+    margin: 0 3rem;
+}
+
+h2, h3 {
+    margin: 1rem 0;
+}
+
+.contact-section p, .social-media, form {
+    margin-left: 2rem;
+}
+
+.social-media li {
+    list-style: none;
+    padding: 1rem 0;
+    transition: transform 0.5s linear;
+    /* border: 1px solid black; */
+}
+
+.social-media li:hover {
+    transform: scaleX(0.97) scaleY(1.03);
+}
+
+.social-media a {
+    text-decoration: none;
+    color: var(--light-brown);
+}
+
+.social-media a:hover {
+    color: rgb(153, 98, 47);
+}
+
+.sm-icons {
+    position: relative;
+    top: 0.7rem;
+    height: 3rem;
+}
+
+input, textarea {
+    margin-top: 0.5rem;
+    margin-bottom: 1.5rem;
+}
+
+#submit {
+    background-color: var(--brown);
+    color: var(--beige);
+    padding: 1.5rem;
+    border-radius: 1rem;
+    cursor: pointer;
+    opacity: 0.9;
+    border-color: var(--beige);
+    font-size: 1.7rem;
+}
+
+#submit:hover {
+    opacity: 1;
+}
+
 footer {
     width: 100%;
     position: relative;
@@ -91,10 +155,6 @@ footer {
 
 /* Media queries */
 @media screen and (max-width: 400px) {
-    
-    body {
-        font-size: 1.5rem;
-    }
 
     .nav-name img{
         height: 2.8rem;
@@ -108,15 +168,12 @@ footer {
     .icons {
         width: 2.8rem;
     }
+    
     .footer-titles {
         font-size: var(--title-font-sm);
     }
 }
 @media screen and (min-width: 400px) {
-
-    body {
-        font-size: 1.7rem;
-    }
 
     .nav-name img{
         height: 3rem;
@@ -143,12 +200,10 @@ footer {
     .icons {
         width: 3rem;
     }
+
     .footer-titles {
         font-size: var(--title-font-md);
     }
-}
-
-@media screen and (min-width: 700px) {
 }
 
 @media screen and (min-width: 768px) {
@@ -165,23 +220,37 @@ footer {
     .right-side img {
         height: 2.3rem;
     }
+    
+    .nav-shadow {
+        box-shadow: 0px 1px 7px var(--transparent-brown);
+    }
 
     footer {
+        top: 5.9rem;
         font-size: 2.3rem;
     }
+
     .icons {
         width: 3.3rem;
     }
+
     .footer-titles, .menu h5 {
         font-size: var(--title-font-lg);
     }
-}
 
-@media screen and (min-width: 1024px) {
-}
+    .main {
+        top: 5.9rem;
+        max-width: 700px;
+        margin: auto;
+    }
 
-@media screen and (min-width: 1200px) {
-}
+    .social-media {
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+    }
 
-@media screen and (min-width: 1500px) {
+    #form-name, #form-email {
+        height: 3rem;
+        width: 20rem;
+    }
 }

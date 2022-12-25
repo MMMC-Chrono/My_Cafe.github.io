@@ -58,3 +58,67 @@ circlesEl.forEach(function(circleEl, i) {
     circleEl.style.zIndex = -i;
 })
 
+//hello animation
+
+const alphabets = document.querySelectorAll('.alphabets');
+let i = 0;
+
+setInterval(function() {
+    if ( i < alphabets.length) {
+    alphabets[i].style.opacity = 1;
+    i++;
+    } else {
+        alphabets.forEach(function(alphabet) {
+            alphabet.style.opacity = 0;
+        })
+        i = 0;
+    }    
+}, 500)
+
+
+//gallery slider
+const imgBox = document.getElementById('gallery-image-box');
+
+const onDown = e => {
+    imgBox.dataset.mouseDownAt = e.clientX;
+}
+
+const onMove = e => {
+    if (imgBox.dataset.mouseDownAt === '0') return;
+
+    const mouseData = parseFloat(imgBox.dataset.mouseDownAt) - e.clientX,
+        maxData = window.innerWidth * 7;
+    
+    const percentage = (mouseData / maxData) * -100,
+        nextPercentageNoLimit = parseFloat(imgBox.dataset.prevPercentage) + percentage,
+        nextPercentage = Math.max(Math.min(nextPercentageNoLimit, 0), -12);
+        
+    console.log(window.frames.innerWidth)
+    imgBox.dataset.percentage = nextPercentage;
+    imgBox.animate({
+        transform: `translate(${nextPercentage*8}%, -50%)`
+    }, {
+        duration: 1200, fill: "forwards"
+    })
+
+    for (const image of imgBox.getElementsByClassName('gallery-image')) {
+        image.animate({
+            objectPosition: `${(70+(nextPercentage*5))}% center`
+        }, {
+            duration: 1200, fill: 'forwards'
+        })
+    }
+}
+
+const onUp = () => {
+    imgBox.dataset.mouseDownAt = "0";
+    imgBox.dataset.prevPercentage = imgBox.dataset.percentage;
+}
+
+window.onmousedown = e => onDown(e);
+window.onmousemove = e => onMove(e);
+window.onmouseup = e => onUp(e);
+
+window.ontouchstart = e => onDown(e.touches[0]);
+window.ontouchmove = e => onMove(e.touches[0]);
+window.ontouchend = e => onUp(e.touches[0]);

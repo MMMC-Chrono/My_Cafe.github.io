@@ -5,7 +5,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>My Cafe | Contact</title>
-        <link rel="stylesheet" href="./assets/css/about.css">
+        <link rel="stylesheet" href="./assets/css/contact.css">
     </head>
     <body>
 
@@ -14,18 +14,51 @@
                 <img src="/assets/images/header/name.png" id="name" alt="">
             </a>
             <div class="right-side">
-                <a href="index.html" class="nav-home">
-                    <img src="/assets/images/header/home.png" alt="">
-                </a>
-                <a href="menu.html" class="nav-menu">
+                <a href="menu.html" class="nav-home">
                     <img src="/assets/images/header/menu.png" alt="">
                 </a>
                 <a href="about.html" class="nav-about">
                     <img src="/assets/images/header/about.png" alt="">
                 </a>
+                <a href="contact.html" class="nav-contact">
+                    <img src="/assets/images/header/contact.png" alt="">
+                </a>
             </div>
         </nav>
 
+        <div  class="main">
+
+            <div class="contact-section">
+                <h2>Contact Us</h2>
+                <p>Phone: 555-555-5555</p>
+                <p>Email: info@cafename.com</p>
+                <p>Address: 123 Main Street, Anytown, USA</p>
+                <h3>Hours</h3>
+                <p>Monday - Friday: 7:00am - 7:00pm</p>
+                <p>Saturday - Sunday: 8:00am - 8:00pm</p>
+                <h3>Follow us on social media</h3>
+                <ul class="social-media">
+                  <li><a href="#"><img src="/assets/images/footer/facebook.png" alt="" class="sm-icons"> Facebook</a></li>
+                  <li><a href="#"><img src="/assets/images/footer/instagram.png" alt="" class="sm-icons"> Instagram</a></li>
+                  <li><a href="#"><img src="/assets/images/footer/twitter.png" alt="" class="sm-icons"> Twitter</a></li>
+                  <li><a href="#"><img src="/assets/images/footer/pinterest.png" alt="" class="sm-icons"> Pinterest</a></li>
+                </ul>
+                <h3>Have a question or suggestion? Contact us using the form below:</h3>
+            </div>
+    
+            <form action="/contact" method="post">
+                <label for="name">Name:</label><br>
+                <input type="text" id="form-name" name="name"><br>
+                <label for="email">Email:</label><br>
+                <input type="email" id="form-email" name="email"><br>
+                <label for="message">Message:</label><br>
+                <textarea id="message" name="message" rows="5" cols="30"></textarea><br>
+                <input type="submit" value="Submit" id="submit">
+            </form> 
+
+            
+        </div>
+            
         <footer id="Contact">
             <div class="icons-and-copyright">
                 <ul class="social-media-icons list">
@@ -48,7 +81,8 @@
 
                 </ul>
 
-                <span class="company-policies">&copy; 2022 MyCafe. All right reserved.</span>
+                <span class="company-policies">&copy; 2022 MyCafe | All right reserved.</span><br/>
+                <span>Icons by icons8.com</span>
             </div>
             <div class="categories">
                 <div class="sub">
