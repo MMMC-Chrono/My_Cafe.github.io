@@ -26,6 +26,15 @@ body {
     color: var(--brown);
 }
 
+body {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+body::-webkit-scrollbar {
+    display: none;
+}
+
 .padding-block {
     padding-block: 1rem;
 }
@@ -156,11 +165,11 @@ h2 {
 #arrow {
     position: absolute;
     top: 50%;
-    left: -4%;
+    left: -5%;
 }
 
 #arrow i {
-    margin-left: .8rem;
+    margin-left: 1.5rem;
 }
 
 footer {
