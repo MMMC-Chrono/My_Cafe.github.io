@@ -46,13 +46,11 @@
                 <h3>Have a question or suggestion? Contact us using the form below:</h3>
             </div>
     
-            <form action="/contact" method="post">
-                <label for="name">Name:</label><br>
-                <input type="text" id="form-name" name="name"><br>
-                <label for="email">Email:</label><br>
-                <input type="email" id="form-email" name="email"><br>
-                <label for="message">Message:</label><br>
-                <textarea id="message" name="message" rows="5" cols="30"></textarea><br>
+            <form action="mailto:maymyamyacin@gmail.com" method="GET">
+                <label for="subject">Subject:</label><br>
+                <input type="text" id="form-name" name="subject" required><br>
+                <label for="body">Message:</label><br>
+                <textarea id="message" name="body" rows="5" cols="30" required></textarea><br>
                 <input type="submit" value="Submit" id="submit">
             </form> 
 
