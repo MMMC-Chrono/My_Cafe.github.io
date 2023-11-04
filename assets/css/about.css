@@ -205,6 +205,10 @@ footer {
 /* Media queries */
 @media screen and (max-width: 400px) {
 
+    body {
+        font-size: 1.5rem;
+    }
+
     .nav-name img{
         height: 2.8rem;
         padding-left: 1.3rem;
@@ -227,6 +231,10 @@ footer {
     }
 }
 @media screen and (min-width: 400px) {
+
+    body {
+        font-size: 1.7rem;
+    }
 
     .nav-name img{
         height: 3rem;
